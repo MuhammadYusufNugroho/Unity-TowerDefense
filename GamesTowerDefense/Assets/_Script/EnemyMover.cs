@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,18 +6,23 @@ public class EnemyMover : MonoBehaviour
 {
 
     [SerializeField] List<WayPoint> m_Path = new List<WayPoint>();
+    [SerializeField] float m_waitTime = 1f;
 
     // Start is called before the first frame update
     void Start()
     {
-        PrintWayPointName();
+        //Debug.Log("Starting Here");
+        StartCoroutine(FollowPath());
+        //Debug.Log("finishing start");
     }
 
-    public void PrintWayPointName()
+    public IEnumerator FollowPath()
     {
-        foreach(WayPoint m_wayPoint in m_Path)
+        foreach(WayPoint wayPoint in m_Path)
         {
-            Debug.Log(m_wayPoint.name);
+            //Debug.Log(wayPoint.name);
+            transform.position = wayPoint.transform.position;
+            yield return new WaitForSeconds(m_waitTime);
         }
     }
 }
