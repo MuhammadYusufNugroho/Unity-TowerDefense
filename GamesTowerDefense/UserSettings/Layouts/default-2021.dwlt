@@ -14,8 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 897
     y: 118
+=======
+    x: 835
+    y: 161
+>>>>>>> TariganA-main
     width: 321
     height: 573
   m_ShowMode: 0
@@ -97,7 +102,11 @@ MonoBehaviour:
   m_MinSize: {x: 315, y: 121}
   m_MaxSize: {x: 4000, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 6303
+=======
+  controlID: 1323
+>>>>>>> TariganA-main
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -122,7 +131,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
+<<<<<<< HEAD
   controlID: 83
+=======
+  controlID: 40
+>>>>>>> TariganA-main
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,8 +181,13 @@ MonoBehaviour:
     y: 0
     width: 272.5
     height: 472
+<<<<<<< HEAD
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
+=======
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> TariganA-main
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -297,7 +315,11 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
+<<<<<<< HEAD
   controlID: 84
+=======
+  controlID: 41
+>>>>>>> TariganA-main
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -322,7 +344,11 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
+<<<<<<< HEAD
   controlID: 85
+=======
+  controlID: 42
+>>>>>>> TariganA-main
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -342,8 +368,13 @@ MonoBehaviour:
     y: 0
     width: 827
     height: 472
+<<<<<<< HEAD
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
+=======
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> TariganA-main
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -370,8 +401,13 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 897
     y: 118
+=======
+    x: 835
+    y: 161
+>>>>>>> TariganA-main
     width: 321
     height: 552
   m_ViewDataDictionary: {fileID: 0}
@@ -419,6 +455,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Environments/Environments_Tile
     m_Globs: []
     m_OriginalText: 
@@ -427,14 +464,31 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Environments/Environments_Tile
   m_LastFoldersGridSize: 16
+=======
+    - Assets/_Assets/TextMesh Pro/Resources/Fonts & Materials
+    m_Globs: []
+    m_OriginalText: 
+  m_ViewMode: 1
+  m_StartGridSize: 84
+  m_LastFolders:
+  - Assets/_Assets/TextMesh Pro/Resources/Fonts & Materials
+  m_LastFoldersGridSize: 84
+>>>>>>> TariganA-main
   m_LastProjectPath: /Users/admin/Documents/Unity/Prototype/Unity-TowerDefense/GamesTowerDefense
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 889d0000
     m_LastClickedID: 40328
     m_ExpandedIDs: 00000000307c0000fe7d0000087e0000228b0000568e000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 528f0000
+    m_LastClickedID: 36690
+    m_ExpandedIDs: 00000000a47f0000a67f0000a87f0000a68e0000aa8e0000ac8e0000b08e0000b88e00004a8f000000ca9a3b
+>>>>>>> TariganA-main
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -462,7 +516,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000307c0000
+=======
+    m_ExpandedIDs: 00000000a47f0000a67f0000a87f0000
+>>>>>>> TariganA-main
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -489,8 +547,13 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
+<<<<<<< HEAD
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
+=======
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c62300008891ffff
+>>>>>>> TariganA-main
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: (0, 0)
@@ -501,7 +564,11 @@ MonoBehaviour:
         y: 0
         width: 0
         height: 0
+<<<<<<< HEAD
       m_UserData: 39846
+=======
+      m_UserData: 31876
+>>>>>>> TariganA-main
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -515,7 +582,11 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
+<<<<<<< HEAD
     m_GridSize: 16
+=======
+    m_GridSize: 84
+>>>>>>> TariganA-main
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
 --- !u!114 &17
@@ -590,9 +661,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 109c0000
       m_LastClickedID: 0
       m_ExpandedIDs: 8a6effffce6effff5676ffff7a77ffff047afffff07affffc290ffff4cf6ffffc6faffff12a000005aa00000
+=======
+      m_SelectedIDs: 4c7d0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: d868ffff7e72ffff3e73ffffec73ffff9674fffff275ffff2479ffff3c7affff7684ffff7884ffff9cb2ffff5cb7ffff94c7ffff86ccffff78daffffc6fafffff27b00000e7c00003a7c00007a900000a0900000c6910000de9100000a920000ba9300001e960000349600005a960000f8970000a0980000549a00006a9a0000909a0000
+>>>>>>> TariganA-main
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -608,7 +685,11 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
+<<<<<<< HEAD
         m_ClientGUIView: {fileID: 0}
+=======
+        m_ClientGUIView: {fileID: 7}
+>>>>>>> TariganA-main
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -916,7 +997,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.37867898, y: 0.43982613, z: -0.21181524, w: 0.7863139}
   m_Size:
+<<<<<<< HEAD
     m_Target: 96.34752
+=======
+    m_Target: 96.55131
+>>>>>>> TariganA-main
     speed: 2
     m_Value: 7.077969
   m_Ortho:
