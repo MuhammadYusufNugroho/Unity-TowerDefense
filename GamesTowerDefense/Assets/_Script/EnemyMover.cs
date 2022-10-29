@@ -6,7 +6,7 @@ public class EnemyMover : MonoBehaviour
 {
 
     [SerializeField] List<WayPoint> m_Path = new List<WayPoint>();
-    [SerializeField] float m_waitTime = 1f;
+    [SerializeField][Range(0f ,5f)] float m_Speed = 1f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,8 +21,18 @@ public class EnemyMover : MonoBehaviour
         foreach(WayPoint wayPoint in m_Path)
         {
             //Debug.Log(wayPoint.name);
-            transform.position = wayPoint.transform.position;
-            yield return new WaitForSeconds(m_waitTime);
+            Vector3 stratPosition = transform.position;
+            Vector3 endPosition = wayPoint.transform.position;
+            float travelPercent = 0f;
+
+            transform.LookAt(endPosition);
+
+            while(travelPercent < 1f)
+            {
+                travelPercent += Time.deltaTime * m_Speed;
+                transform.position = Vector3.Lerp(stratPosition ,endPosition ,travelPercent);
+                yield return new WaitForEndOfFrame();
+            }
         }
     }
 }
