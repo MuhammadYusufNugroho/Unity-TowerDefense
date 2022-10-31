@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2508288241897894888
+--- !u!1 &2615002413381214203
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2508288241897894895}
-  - component: {fileID: 2508288241897894894}
+  - component: {fileID: 2615002413381214201}
+  - component: {fileID: 2615002413381214200}
   m_Layer: 0
-  m_Name: Bank
+  m_Name: ObjectPool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2508288241897894895
+--- !u!4 &2615002413381214201
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2508288241897894888}
+  m_GameObject: {fileID: 2615002413381214203}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,18 +32,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2508288241897894894
+--- !u!114 &2615002413381214200
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2508288241897894888}
+  m_GameObject: {fileID: 2615002413381214203}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e176e326429bd4fcf8f3357ab08a96e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d98caa5d1c1e4218968042989661784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_startingBalance: 1000
-  m_currentBalance: 0
-  _displayBalance: {fileID: 0}
+  _enemyPrefab: {fileID: 5439585203801408449, guid: 936d946ec0ed2c74db565329afbe0c2e, type: 3}
+  _poolSize: 5
+  _spawnTimer: 2.5
