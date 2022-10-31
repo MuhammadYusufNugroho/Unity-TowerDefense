@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [ExecuteAlways]
+[RequireComponent(typeof(TextMeshPro))]
 public class CoordinateLableler : MonoBehaviour
 {
     // Reference Waypoint Script
@@ -36,7 +37,7 @@ public class CoordinateLableler : MonoBehaviour
             UpdateObjectName();
         }
         // Calling method 
-        ColorCoordinates();
+        SetLabelColor();
         ToggleLabels();
     }
 
@@ -49,7 +50,7 @@ public class CoordinateLableler : MonoBehaviour
         }
     }
 
-    private void ColorCoordinates()
+    private void SetLabelColor()
     {
         // Logic for changing the colors
         if (waypoint.IsPlaceable)
