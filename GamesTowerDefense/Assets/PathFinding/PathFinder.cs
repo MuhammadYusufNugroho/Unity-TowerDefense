@@ -4,7 +4,7 @@ using UnityEngine;
 public class PathFinder : MonoBehaviour
 {
     [SerializeField] Vector2Int startCoordinates;
-    [SerializeField] Vector2Int destinateCoordinates;
+    [SerializeField] Vector2Int destinationCoordinates;
 
     Node startNode;
     Node destinationNode;
@@ -25,15 +25,16 @@ public class PathFinder : MonoBehaviour
         {
             grid = m_gridManager.Grid;
         }
-
-        startNode = new Node(startCoordinates ,true);
-        destinationNode = new Node(destinateCoordinates ,true);
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        startNode = m_gridManager.Grid[startCoordinates];
+        destinationNode = m_gridManager.Grid[destinationCoordinates];
+
         BreadthFristSearch();
+        BuildPath();
     }
 
     void ExploreNeighbors()
@@ -53,6 +54,7 @@ public class PathFinder : MonoBehaviour
         {
             if(!reached.ContainsKey(neighbor.coordinates) && neighbor.isWalkable)
             {
+                neighbor.connectedTo = currentSearchNode;
                 reached.Add(neighbor.coordinates ,neighbor);
                 frontire.Enqueue(neighbor);
             }
@@ -71,10 +73,30 @@ public class PathFinder : MonoBehaviour
             currentSearchNode = frontire.Dequeue();
             currentSearchNode.isExplored = true;
             ExploreNeighbors();
-            if(currentSearchNode.coordinates == destinateCoordinates)
+            if(currentSearchNode.coordinates == destinationCoordinates)
             {
                 isRunning = false;
             }
         }
+    }
+
+    List<Node> BuildPath()
+    {
+        List<Node> path = new List<Node>();
+        Node currentNode = destinationNode;
+
+        path.Add(currentNode);
+        currentNode.isPath = true;
+
+        while(currentNode.connectedTo != null)
+        {
+            currentNode = currentNode.connectedTo;
+            path.Add(currentNode);
+            currentNode.isPath = true;
+        }
+
+        path.Reverse();
+
+        return path;
     }
 }

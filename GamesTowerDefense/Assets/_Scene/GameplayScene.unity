@@ -2487,7 +2487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa4c126fa575947e3810078137e38769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: {x: 5, y: 5}
+  gridSize: {x: 10, y: 10}
 --- !u!4 &221721299
 Transform:
   m_ObjectHideFlags: 0
@@ -5173,11 +5173,27 @@ PrefabInstance:
       value: ObjectPool
       objectReference: {fileID: 0}
     - target: {fileID: 5894047018735116667, guid: 8d809f7d0130241e2bbe84b6a0a862f3, type: 3}
+      propertyPath: startCoordinates.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894047018735116667, guid: 8d809f7d0130241e2bbe84b6a0a862f3, type: 3}
+      propertyPath: startCoordinates.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894047018735116667, guid: 8d809f7d0130241e2bbe84b6a0a862f3, type: 3}
       propertyPath: destinateCoordinates.x
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5894047018735116667, guid: 8d809f7d0130241e2bbe84b6a0a862f3, type: 3}
       propertyPath: destinateCoordinates.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894047018735116667, guid: 8d809f7d0130241e2bbe84b6a0a862f3, type: 3}
+      propertyPath: destinationCoordinates.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5894047018735116667, guid: 8d809f7d0130241e2bbe84b6a0a862f3, type: 3}
+      propertyPath: destinationCoordinates.y
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5894047018735116667, guid: 8d809f7d0130241e2bbe84b6a0a862f3, type: 3}
@@ -9771,7 +9787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &665423900
 Transform:
   m_ObjectHideFlags: 0
@@ -25385,14 +25401,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687258581}
-  m_LocalRotation: {x: -0.60878175, y: 0.00003659364, z: 0.004142361, w: -0.7933269}
-  m_LocalPosition: {x: 105, y: 100, z: 20}
+  m_LocalRotation: {x: -0.51591164, y: 0.0005012077, z: 0.0041120932, w: -0.8566318}
+  m_LocalPosition: {x: 100, y: 60, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 75, y: 358.871, z: -1.465}
+  m_LocalEulerAnglesHint: {x: 62.115, y: 359.375, z: -0.926}
 --- !u!114 &1687258586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32139,7 +32155,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.93e-43, y: 7.1e-44, z: 0, w: 119612.56}
+  m_BoundingSphereOverride: {x: 7.2715916e+31, y: 1.7595098e+22, z: 2.4718197e+20, w: 1.7440401e+28}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
