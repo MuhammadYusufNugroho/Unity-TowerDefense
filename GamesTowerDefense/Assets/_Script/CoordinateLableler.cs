@@ -9,7 +9,7 @@ public class CoordinateLableler : MonoBehaviour
     // Reference Waypoint Script
     //WayPoint waypoint;
     //Reference Grid
-    GridManager gridManager;
+    GridManager m_gridManager;
     [SerializeField] Color _defaultColor = Color.white;
     [SerializeField] Color _blockedColor = Color.grey;
     [SerializeField] Color _exploredColor = Color.yellow;
@@ -26,7 +26,7 @@ public class CoordinateLableler : MonoBehaviour
         m_Label.enabled = false;
 
         //waypoint = GetComponentInParent<WayPoint>();
-        gridManager = FindObjectOfType<GridManager>();
+        m_gridManager = FindObjectOfType<GridManager>();
         DisplayCoordinates();
     }
 
@@ -58,10 +58,10 @@ public class CoordinateLableler : MonoBehaviour
 
     private void SetLabelColor()
     {
-        if(gridManager == null)
+        if(m_gridManager == null)
         { return; }
 
-        Node node = gridManager.GetNode(m_Coordinates);
+        Node node = m_gridManager.GetNode(m_Coordinates);
 
         if(node == null)
         { return; }
@@ -96,8 +96,14 @@ public class CoordinateLableler : MonoBehaviour
     public void DisplayCoordinates()
     {
         // Displaying the coordinates for the tiles
-        m_Coordinates.x = Mathf.RoundToInt(transform.parent.position.x / UnityEditor.EditorSnapSettings.move.x);
-        m_Coordinates.y = Mathf.RoundToInt(transform.parent.position.z / UnityEditor.EditorSnapSettings.move.z);
+        if(m_gridManager == null)
+        {
+            return;
+        }
+
+        m_Coordinates.x = Mathf.RoundToInt(transform.parent.position.x / m_gridManager.myUnityGridSize);
+        m_Coordinates.y = Mathf.RoundToInt(transform.parent.position.z / m_gridManager.myUnityGridSize);
+
         m_Label.text = m_Coordinates.x + "," + m_Coordinates.y;
     }
 

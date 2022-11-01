@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using DG.Tweening.Plugins.Core.PathCore;
 using UnityEngine;
 
 [RequireComponent(typeof(Enemy))]
@@ -8,8 +7,8 @@ public class EnemyMover : MonoBehaviour
 {
     Enemy enemy;
 
-    [SerializeField] List<WayPoint> m_Path = new List<WayPoint>();
-    [SerializeField][Range(0f, 5f)] float m_Speed = 1f;
+    [SerializeField] List<Tile> m_Path = new List<Tile>();
+    [SerializeField][Range(0f ,5f)] float m_Speed = 1f;
 
     // Start is called before the first frame update
     void OnEnable()
@@ -33,10 +32,10 @@ public class EnemyMover : MonoBehaviour
 
         GameObject parent = GameObject.FindGameObjectWithTag("Path");
 
-        foreach (Transform child in parent.transform)
+        foreach(Transform child in parent.transform)
         {
-            WayPoint waypoint = child.GetComponent<WayPoint>();
-            if (waypoint != null)
+            Tile waypoint = child.GetComponent<Tile>();
+            if(waypoint != null)
             {
                 m_Path.Add(waypoint);
             }
@@ -56,7 +55,7 @@ public class EnemyMover : MonoBehaviour
 
     IEnumerator FollowPath()
     {
-        foreach (WayPoint wayPoint in m_Path)
+        foreach(Tile wayPoint in m_Path)
         {
             //Debug.Log(wayPoint.name);
             Vector3 stratPosition = transform.position;
@@ -65,10 +64,10 @@ public class EnemyMover : MonoBehaviour
 
             transform.LookAt(endPosition);
 
-            while (travelPercent < 1f)
+            while(travelPercent < 1f)
             {
                 travelPercent += Time.deltaTime * m_Speed;
-                transform.position = Vector3.Lerp(stratPosition, endPosition, travelPercent);
+                transform.position = Vector3.Lerp(stratPosition ,endPosition ,travelPercent);
                 yield return new WaitForEndOfFrame();
             }
         }
