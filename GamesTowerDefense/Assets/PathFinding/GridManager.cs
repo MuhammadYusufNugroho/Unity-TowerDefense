@@ -11,7 +11,6 @@ public class GridManager : MonoBehaviour
     void awake()
     {
         CreateGrid();
-
     }
 
     public Node GetNode(Vector2Int coordinates)
