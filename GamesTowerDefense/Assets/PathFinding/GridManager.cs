@@ -15,6 +15,15 @@ public class GridManager : MonoBehaviour
 
     }
 
+    public Node GetNode(Vector2Int coordinates)
+    {
+        if (grid.ContainsKey(coordinates))
+        {
+            return grid[coordinates];
+        }
+        return null;
+    }
+
     void CreateGrid()
     {
         for (int x = 0; x < gridSize.x; x++)
