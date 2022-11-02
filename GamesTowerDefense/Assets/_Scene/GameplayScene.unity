@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.28502673, g: 0.37139347, b: 0.49600995, a: 1}
+  m_IndirectSpecularColor: {r: 0.28502658, g: 0.37139314, b: 0.49600917, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5174,11 +5174,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5894047018735116667, guid: 8d809f7d0130241e2bbe84b6a0a862f3, type: 3}
       propertyPath: startCoordinates.x
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5894047018735116667, guid: 8d809f7d0130241e2bbe84b6a0a862f3, type: 3}
       propertyPath: startCoordinates.y
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5894047018735116667, guid: 8d809f7d0130241e2bbe84b6a0a862f3, type: 3}
       propertyPath: destinateCoordinates.x
@@ -5190,11 +5190,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5894047018735116667, guid: 8d809f7d0130241e2bbe84b6a0a862f3, type: 3}
       propertyPath: destinationCoordinates.x
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5894047018735116667, guid: 8d809f7d0130241e2bbe84b6a0a862f3, type: 3}
       propertyPath: destinationCoordinates.y
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5894047018735116667, guid: 8d809f7d0130241e2bbe84b6a0a862f3, type: 3}
       propertyPath: currentSearchMode.coordinates.x

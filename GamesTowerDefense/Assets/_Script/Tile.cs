@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class WayPoint : MonoBehaviour
+public class Tile : MonoBehaviour
 {
     // Variable for tower prefab and logic for placeable
     [SerializeField] Tower m_TowerPrefab;

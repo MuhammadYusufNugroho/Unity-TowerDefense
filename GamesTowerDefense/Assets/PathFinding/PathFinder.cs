@@ -11,51 +11,52 @@ public class PathFinder : MonoBehaviour
     Node currentSearchNode;
 
     Queue<Node> frontire = new Queue<Node>();
-    Dictionary<Vector2Int ,Node> reached = new Dictionary<Vector2Int ,Node>();
+    Dictionary<Vector2Int, Node> reached = new Dictionary<Vector2Int, Node>();
 
-    Vector2Int[] directions = { Vector2Int.right ,Vector2Int.left ,Vector2Int.up ,Vector2Int.down };
-    GridManager m_gridManager;
-    Dictionary<Vector2Int ,Node> grid = new Dictionary<Vector2Int ,Node>();
+    Vector2Int[] directions = { Vector2Int.right, Vector2Int.left, Vector2Int.up, Vector2Int.down };
+    GridManager gridManager;
+    Dictionary<Vector2Int, Node> grid = new Dictionary<Vector2Int, Node>();
 
 
     private void Awake()
     {
-        m_gridManager = FindObjectOfType<GridManager>();
-        if(m_gridManager != null)
+        gridManager = FindObjectOfType<GridManager>();
+        if (gridManager != null)
         {
-            grid = m_gridManager.Grid;
+            grid = gridManager.Grid;
         }
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        startNode = m_gridManager.Grid[startCoordinates];
-        destinationNode = m_gridManager.Grid[destinationCoordinates];
+        startNode = gridManager.Grid[startCoordinates];
+        destinationNode = gridManager.Grid[destinationCoordinates];
 
         BreadthFristSearch();
         BuildPath();
+
     }
 
     void ExploreNeighbors()
     {
         List<Node> neighbors = new List<Node>();
 
-        foreach(Vector2Int direction in directions)
+        foreach (Vector2Int direction in directions)
         {
             Vector2Int neighborCoords = currentSearchNode.coordinates + direction;
-            if(grid.ContainsKey(neighborCoords))
+            if (grid.ContainsKey(neighborCoords))
             {
                 neighbors.Add(grid[neighborCoords]);
             }
         }
 
-        foreach(Node neighbor in neighbors)
+        foreach (Node neighbor in neighbors)
         {
-            if(!reached.ContainsKey(neighbor.coordinates) && neighbor.isWalkable)
+            if (!reached.ContainsKey(neighbor.coordinates) && neighbor.isWalkable)
             {
                 neighbor.connectedTo = currentSearchNode;
-                reached.Add(neighbor.coordinates ,neighbor);
+                reached.Add(neighbor.coordinates, neighbor);
                 frontire.Enqueue(neighbor);
             }
         }
@@ -66,14 +67,14 @@ public class PathFinder : MonoBehaviour
         bool isRunning = true;
 
         frontire.Enqueue(startNode);
-        reached.Add(startCoordinates ,startNode);
+        reached.Add(startCoordinates, startNode);
 
-        while(frontire.Count > 0 && isRunning)
+        while (frontire.Count > 0 && isRunning)
         {
             currentSearchNode = frontire.Dequeue();
             currentSearchNode.isExplored = true;
             ExploreNeighbors();
-            if(currentSearchNode.coordinates == destinationCoordinates)
+            if (currentSearchNode.coordinates == destinationCoordinates)
             {
                 isRunning = false;
             }
@@ -88,7 +89,7 @@ public class PathFinder : MonoBehaviour
         path.Add(currentNode);
         currentNode.isPath = true;
 
-        while(currentNode.connectedTo != null)
+        while (currentNode.connectedTo != null)
         {
             currentNode = currentNode.connectedTo;
             path.Add(currentNode);
