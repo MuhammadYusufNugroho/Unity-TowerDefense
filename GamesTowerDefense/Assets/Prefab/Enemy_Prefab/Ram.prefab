@@ -93,9 +93,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7118409473319309849}
   - component: {fileID: 6334883535578584564}
-  - component: {fileID: 2313288354865464384}
-  - component: {fileID: 1808224411473900071}
-  - component: {fileID: 7737910759228551742}
+  - component: {fileID: 7367674365536926436}
+  - component: {fileID: 5202588120472992243}
+  - component: {fileID: 6823837776741475877}
   m_Layer: 0
   m_Name: Ram
   m_TagString: Untagged
@@ -132,7 +132,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 5, z: 5}
   m_Center: {x: 0, y: 2.5, z: 0}
---- !u!114 &2313288354865464384
+--- !u!114 &7367674365536926436
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,12 +141,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5439585203801408449}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79453c7ef3255264d8572684a2c087ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d096e6f0549697478ca5feb08a1634b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Path: []
-  m_Speed: 0.5
---- !u!114 &1808224411473900071
+  goldReward: 25
+  goldPenalty: 25
+--- !u!114 &5202588120472992243
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,12 +155,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5439585203801408449}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88db6f951ca29af43b8ba10dda0ec981, type: 3}
+  m_Script: {fileID: 11500000, guid: 3927679a94c974e4bb70f750e84057aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxHitPoint: 3
-  _difficultRamp: 5
---- !u!114 &7737910759228551742
+  maxHitPoints: 5
+  difficultyRamp: 1
+--- !u!114 &6823837776741475877
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -169,8 +169,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5439585203801408449}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77b3ce412c7c54e528818944c4b17efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b1584ec732e6aa4ba9c88c2d4a15002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_goldReward: 25
-  m_goldPenalty: 25
+  speed: 1
