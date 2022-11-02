@@ -1,16 +1,18 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
     Dictionary<Vector2Int, Node> grid = new Dictionary<Vector2Int, Node>();
-    public Dictionary<Vector2Int, Node> Grid { get { return grid; } }
 
     [SerializeField]
     Vector2Int gridSize;
     void awake()
     {
         CreateGrid();
+
     }
 
     public Node GetNode(Vector2Int coordinates)

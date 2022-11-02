@@ -57,11 +57,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2615002413381214203}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c6d5558b2d7e254abe27737d2a2e725, type: 3}
+  m_Script: {fileID: 11500000, guid: fa4c126fa575947e3810078137e38769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSearchMode:
-    coordinates: {x: 0, y: 0}
-    isWalkable: 0
-    isExplored: 0
-    isPath: 0
+  gridSize: {x: 0, y: 0}
