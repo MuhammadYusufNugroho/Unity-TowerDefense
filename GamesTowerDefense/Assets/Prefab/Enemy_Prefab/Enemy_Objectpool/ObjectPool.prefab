@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2615002413381214203
+--- !u!1 &282470858800634884
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2615002413381214201}
-  - component: {fileID: 2615002413381214200}
-  - component: {fileID: 5894047018735116667}
+  - component: {fileID: 282470858800634886}
+  - component: {fileID: 282470858800634887}
+  - component: {fileID: 282470858800634880}
   m_Layer: 0
   m_Name: ObjectPool
   m_TagString: Untagged
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2615002413381214201
+--- !u!4 &282470858800634886
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2615002413381214203}
+  m_GameObject: {fileID: 282470858800634884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,35 +33,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2615002413381214200
+--- !u!114 &282470858800634887
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2615002413381214203}
+  m_GameObject: {fileID: 282470858800634884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d98caa5d1c1e4218968042989661784, type: 3}
+  m_Script: {fileID: 11500000, guid: ea4a9ce486c34094ea65d750a55b2e5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 5439585203801408449, guid: 936d946ec0ed2c74db565329afbe0c2e, type: 3}
-  _poolSize: 5
-  _spawnTimer: 2.5
---- !u!114 &5894047018735116667
+  enemyPrefab: {fileID: 5439585203801408449, guid: 936d946ec0ed2c74db565329afbe0c2e, type: 3}
+  poolSize: 5
+  spawnTimer: 1
+--- !u!114 &282470858800634880
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2615002413381214203}
+  m_GameObject: {fileID: 282470858800634884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c6d5558b2d7e254abe27737d2a2e725, type: 3}
+  m_Script: {fileID: 11500000, guid: b83e91d92c37f9b4ea681d751ead1a26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSearchMode:
-    coordinates: {x: 0, y: 0}
-    isWalkable: 0
-    isExplored: 0
-    isPath: 0
+  startCoordinates: {x: 0, y: 0}
+  destinationCoordinates: {x: 16, y: 8}
