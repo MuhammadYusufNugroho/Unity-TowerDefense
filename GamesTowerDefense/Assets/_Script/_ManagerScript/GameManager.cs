@@ -7,9 +7,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     // Logic Win or Lose Variable
-    public GameObject OnWin { get; private set; }
-    public GameObject OnLose { get; private set; }
-    public GameObject SetUpCanvas { get; private set; }
+    public GameObject win;
+    public GameObject lose;
+
 
     // Level Manager
     /*
@@ -37,11 +37,12 @@ public class GameManager : MonoBehaviour
             Instance = this;
         DontDestroyOnLoad(this);
         #endregion
+
     }
 
     // #Logic Win or Lose Method
-    public void SetOnWin() => OnWin.SetActive(true);
-    public void SetOnLose() => OnWin.SetActive(true);
+    public void SetOnWin() => win.SetActive(true);
+    public void SetOnLose() => lose.SetActive(true);
 
 
 }
