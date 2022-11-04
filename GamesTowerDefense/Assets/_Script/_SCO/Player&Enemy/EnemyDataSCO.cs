@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "MyDataGames/Enemydata")]
+[CreateAssetMenu(menuName = "MyDataGames/EnemyData")]
 public class EnemyDataSCO : ScriptableObject
 {
     // Enemy Prefab
