@@ -7,18 +7,17 @@ public class EnemyDataSCO : ScriptableObject
 {
     // Enemy Prefab
     public GameObject enemyPrefab;
+
     // General type of enemy
+    [Header("Enemy Biography")]
     public int enemyId;
     public string enemyName;
     public string enemyDescription;
-    // Stats for enemy
-    public int enemyHealth;
-    public float enemySpeed;
-    public float enemyDetectRange;
-    // Stats for damage
-    public int enemyDamage;
-    /*
-     -> Discuss stats an any data for the object
-    */
 
+    // Stats for enemy
+    [Header("Enemy PrimaryStats")]
+    public int enemyHealth;
+    public int enemyDamage;
+    public float enemySpeed;
+    public float enemyAttackSpeed;
 }
