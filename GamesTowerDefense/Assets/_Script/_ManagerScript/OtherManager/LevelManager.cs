@@ -8,19 +8,28 @@ using System;
 
 public class LevelManager : MonoBehaviour
 {
+    public static LevelManager Instance;
+
     // Reference
     public Slider timeSlider;
     public TMP_Text timerText;
     public float gameTime;
-    private bool stopTimer;
+    public bool stopTimer { get; set; }
 
+    #region Singleton
+
+    #endregion
 
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+
         stopTimer = false;
         timeSlider.maxValue = gameTime;
         timeSlider.value = gameTime;
-
     }
     private void Update()
     {
