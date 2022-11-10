@@ -1490,7 +1490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeSlider: {fileID: 136487127}
   timerText: {fileID: 1450904831}
-  gameTime: 213
+  gameTime: 5
 --- !u!1 &1299265784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,7 +1502,7 @@ GameObject:
   - component: {fileID: 1299265786}
   - component: {fileID: 1299265785}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: ObjectSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1527,13 +1527,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299265784}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.29457474, y: 2.5483007, z: 0.060726166}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.2665573, y: -0.53290224, z: 4.4953856}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1408510344}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1392208095
 GameObject:
@@ -1546,7 +1546,7 @@ GameObject:
   - component: {fileID: 1392208097}
   - component: {fileID: 1392208096}
   m_Layer: 0
-  m_Name: OP
+  m_Name: Object Pool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1567,7 +1567,7 @@ MonoBehaviour:
   pools:
   - tag: Cube
     enemyPrefab: {fileID: 1809284876483002328, guid: a19c24c68664e4018af1afbbece59a69, type: 3}
-    poolSize: 10
+    poolSize: 100
 --- !u!4 &1392208097
 Transform:
   m_ObjectHideFlags: 0
@@ -1575,13 +1575,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1392208095}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.23, y: 4.62, z: 0.77}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.2580174, y: -0.8912029, z: 5.2046595}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 1408510344}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1408510343
 GameObject:
@@ -1613,6 +1613,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1293704822}
+  - {fileID: 1299265786}
+  - {fileID: 1392208097}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

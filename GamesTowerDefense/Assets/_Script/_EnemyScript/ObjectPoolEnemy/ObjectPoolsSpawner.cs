@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectPoolsSpawner : MonoBehaviour
 {
-
-
-    private void start()
-    {
-
-    }
-
+    LevelManager levelManager;
     private void FixedUpdate()
     {
-        ObjectPools.Instance.SpawnFromPool("Cube", transform.position, transform.rotation);
+        levelManager = LevelManager.Instance;
+        if (levelManager.stopTimer == false)
+        {
+            ObjectPools.Instance.SpawnFromPool("Cube", transform.position, transform.rotation);
+        }
+        else if (levelManager.stopTimer == true)
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 }

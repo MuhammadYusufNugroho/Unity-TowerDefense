@@ -17,13 +17,23 @@ public class ObjectPools : MonoBehaviour
     public Dictionary<string, Queue<GameObject>> poolDictionary;
     public List<pool> pools;
 
+    #region *****Singleton*****
     public static ObjectPools Instance;
     private void Awake()
     {
         Instance = this;
     }
+    #endregion
+
+    LevelManager levelManager;
 
     private void Start()
+    {
+        CreatingPool();
+
+    }
+
+    private void CreatingPool()
     {
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
 
