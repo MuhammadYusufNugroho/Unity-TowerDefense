@@ -1,20 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
 
+
 public class LevelManager : MonoBehaviour
 {
+    private enum StateLevel
+    {
+        easy,
+        moderate,
+        hard
+    }
 
+    [SerializeField] private StateLevel stateLevel;
 
+    #region Variable for Time Manager
     // Reference
     public Slider timeSlider;
     public TMP_Text timerText;
     public float gameTime;
     public bool stopTimer { get; set; }
+    private StateLevel StateLevel1 { get => stateLevel; set => stateLevel = value; }
+    #endregion
+
+    [SerializeField] Image[] stateimages = new Image[3];
 
     #region *****Singleton*****
     public static LevelManager Instance;
@@ -34,6 +46,7 @@ public class LevelManager : MonoBehaviour
     private void Update()
     {
         SetupTimer();
+
     }
 
     private void SetupTimer()
@@ -47,12 +60,27 @@ public class LevelManager : MonoBehaviour
         if (time <= 0)
         {
             stopTimer = true;
-
         }
         else if (stopTimer == false)
         {
             timerText.text = textTime;
             timeSlider.value = time;
         }
+
+        //todo Tweak this one out
+        if (time <= 180)
+            stateimages[0].gameObject.SetActive(true);
+        else if (time == 120)
+            stateimages[1].gameObject.SetActive(true);
+        else if (time == 60)
+            stateimages[2].gameObject.SetActive(true);
+
     }
+
+
+    public IEnumerator WaitStateLevel(int timeToWait)
+    {
+        yield return new WaitForSeconds(timeToWait);
+    }
+
 }

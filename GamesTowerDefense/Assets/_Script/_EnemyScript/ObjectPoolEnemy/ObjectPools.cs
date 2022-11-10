@@ -12,6 +12,7 @@ public class ObjectPools : MonoBehaviour
         public string tag;
         public GameObject enemyPrefab;
         public int poolSize;
+        public int poolTime;
     }
 
     public Dictionary<string, Queue<GameObject>> poolDictionary;
@@ -25,12 +26,9 @@ public class ObjectPools : MonoBehaviour
     }
     #endregion
 
-    LevelManager levelManager;
-
     private void Start()
     {
         CreatingPool();
-
     }
 
     private void CreatingPool()
