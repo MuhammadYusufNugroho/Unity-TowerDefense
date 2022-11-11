@@ -26,7 +26,7 @@ public class LevelManager : MonoBehaviour
     private StateLevel StateLevel1 { get => stateLevel; set => stateLevel = value; }
     #endregion
 
-    [SerializeField] Image[] stateimages = new Image[3];
+    [SerializeField] GameObject[] stateimages = new GameObject[3];
 
     #region *****Singleton*****
     public static LevelManager Instance;
@@ -68,19 +68,25 @@ public class LevelManager : MonoBehaviour
         }
 
         //todo Tweak this one out
+        /*
         if (time <= 180)
-            stateimages[0].gameObject.SetActive(true);
-        else if (time == 120)
+            StartCoroutine(WaitStateLevel());
+        else if (time <= 120)
             stateimages[1].gameObject.SetActive(true);
-        else if (time == 60)
+        else if (time <= 60)
             stateimages[2].gameObject.SetActive(true);
+        */
+
 
     }
 
 
-    public IEnumerator WaitStateLevel(int timeToWait)
+    public IEnumerator WaitStateLevel()
     {
-        yield return new WaitForSeconds(timeToWait);
+        stateimages[0].gameObject.SetActive(true);
+        yield return new WaitForSeconds(3);
+        stateimages[0].gameObject.SetActive(false);
+        yield return null;
     }
 
 }
