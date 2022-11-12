@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour, IPooledObject
 {
-    enum enemyState
+    public enum enemyState
     {
         enemySpawning,
         enemyMove,
@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour, IPooledObject
         enemyDeath
     }
 
+    public static Enemy Instance;
     // Reference
     NavMeshAgent navMeshAgent;
 
@@ -22,6 +23,7 @@ public class Enemy : MonoBehaviour, IPooledObject
 
     private void Awake()
     {
+        Instance = this;
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
@@ -37,7 +39,7 @@ public class Enemy : MonoBehaviour, IPooledObject
 
     }
 
-    private void OnEnemyMove()
+    public void OnEnemyMove()
     {
         //navMeshAgent.destination = referencePlayer.gameObject.transform.position;
     }
