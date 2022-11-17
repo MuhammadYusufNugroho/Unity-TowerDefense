@@ -11,9 +11,9 @@ public class ObjectPoolsSpawner : MonoBehaviour
     private void StopingSpawn()
     {
         levelManager = LevelManager.Instance;
-        if (levelManager.stopTimer == false)
+        if (levelManager._isStopTimer == false)
             ObjectPools.Instance.SpawnFromPool("Cube", transform.position, transform.rotation);
-        else if (levelManager.stopTimer == true)
+        else if (levelManager._isStopTimer == true)
             this.gameObject.SetActive(false);
     }
 }

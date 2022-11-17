@@ -3,42 +3,23 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
-    // Singleton Pattern
+    // Declare Singleton Pattern
     public static GameManager Instance { get; private set; }
 
-    // Logic Win or Lose Variable
-    [Header("Logic Winning or Losing")]
-    public GameObject win;
-    public GameObject lose;
+    // Variable for Win or Lose
+    public GameObject win { get; private set; }
+    public GameObject lose { get; private set; }
 
-    /*
-     * Our To-do
-    // Level Manager
-     * SetUp Timer 
-     * Showing deck 
-    // Player Manager Variable
-     * Put the tower 
-    // Enemy Manager Variable
-     * Instantiate Pool Enemy 
-*/
-
-    // #Awake
+    // Awake
     private void Awake()
     {
-        #region Design Patter Singleton Rules
+        #region ***Singleton***
         if (Instance != null && Instance != this)
             Destroy(this);
         else
             Instance = this;
-        DontDestroyOnLoad(this);
         #endregion
-
     }
-
-    // #Logic Win or Lose Method
-    public void SetOnWin() => win.SetActive(true);
-    public void SetOnLose() => lose.SetActive(true);
 
 
 }
-
