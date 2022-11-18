@@ -1,20 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using System;
-
 
 public class LevelManager : MonoBehaviour
 {
+    // Level Manager Instance
+    public static LevelManager Instance;
+
     #region Variable for Time Manager
     // Variable for Time Manager
     [SerializeField] private Slider _timeSlider;
     [SerializeField] private TMP_Text _timerText;
     [SerializeField] private float _gameTime;
-    [SerializeField] private bool _isStopTimer { get; set; }
+    public bool _isStopTimer { get; set; }
     #endregion
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
