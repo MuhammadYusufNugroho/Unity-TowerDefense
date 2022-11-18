@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ObjectPoolsSpawner : MonoBehaviour
 {
-    LevelManager levelManager;
+    TimeManager timeManager;
     private void FixedUpdate()
     {
         StopingSpawn();
@@ -10,10 +10,10 @@ public class ObjectPoolsSpawner : MonoBehaviour
 
     private void StopingSpawn()
     {
-        levelManager = LevelManager.Instance;
-        if (levelManager._isStopTimer == false)
+        timeManager = TimeManager.Instance;
+        if (timeManager._isStopTimer == false)
             ObjectPools.Instance.SpawnFromPool("Cube", transform.position, transform.rotation);
-        else if (levelManager._isStopTimer == true)
+        else if (timeManager._isStopTimer == true)
             this.gameObject.SetActive(false);
     }
 }

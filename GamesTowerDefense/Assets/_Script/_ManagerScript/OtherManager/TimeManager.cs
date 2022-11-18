@@ -2,10 +2,10 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class LevelManager : MonoBehaviour
+public class TimeManager : MonoBehaviour
 {
     // Level Manager Instance
-    public static LevelManager Instance;
+    public static TimeManager Instance;
 
     #region Variable for Time Manager
     // Variable for Time Manager
