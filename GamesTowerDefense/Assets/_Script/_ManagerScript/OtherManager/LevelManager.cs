@@ -22,6 +22,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        // Setup Logic for timer
         _isStopTimer = false;
         _timeSlider.maxValue = _gameTime;
         _timeSlider.value = _gameTime;
@@ -29,6 +30,7 @@ public class LevelManager : MonoBehaviour
 
     private void Update()
     {
+        // Call method
         SetupTimer();
     }
 
