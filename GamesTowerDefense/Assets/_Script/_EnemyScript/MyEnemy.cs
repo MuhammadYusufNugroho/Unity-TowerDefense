@@ -4,7 +4,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour, IPooledObject
+public class MyEnemy : MonoBehaviour, IPooledObject
 {
     public enum enemyState
     {
@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour, IPooledObject
         enemyDeath
     }
 
-    public static Enemy Instance;
+    public static MyEnemy Instance;
     // Reference
     NavMeshAgent navMeshAgent;
 
