@@ -57,9 +57,6 @@ public class PathFinder : MonoBehaviour
             if (grid.ContainsKey(neighborCoords))
             {
                 neighbors.Add(grid[neighborCoords]);
-                //Todo Finish This ones
-
-
             }
         }
 
@@ -77,6 +74,9 @@ public class PathFinder : MonoBehaviour
 
     private void BreadFirstSearch()
     {
+        startNode.isWalkable = true;
+        destinationNode.isWalkable = true;
+
         frontier.Clear();
         reached.Clear();
 
