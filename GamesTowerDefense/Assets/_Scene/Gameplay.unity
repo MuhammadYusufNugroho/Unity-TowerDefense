@@ -396,7 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ac15a626e99d4d32a6ddfc62b660a33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: {x: 4, y: 3}
+  gridSize: {x: 4, y: 4}
 --- !u!4 &283859283
 Transform:
   m_ObjectHideFlags: 0
@@ -2091,6 +2091,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa1185d18a3f8454ea12a38a1ae98392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startCoordinates: {x: 2, y: 2}
+  destinationCoordinates: {x: 1, y: 2}
 --- !u!1 &1593666721
 GameObject:
   m_ObjectHideFlags: 0
@@ -5252,6 +5254,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8079497497638727916, guid: 717a2e72dd71846d8bd2b37f2a8fce50, type: 3}
+      propertyPath: poolSize
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8079497497638727917, guid: 717a2e72dd71846d8bd2b37f2a8fce50, type: 3}
       propertyPath: m_Name
       value: ObjectPool
