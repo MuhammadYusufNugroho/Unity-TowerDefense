@@ -41,7 +41,7 @@ public class PathFinder : MonoBehaviour
 
     public List<Node> GetNewPath()
     {
-        gridManager.ResetNode();
+        gridManager.ResetNodes();
         BreadFirstSearch();
         return BuildPath();
     }
@@ -103,13 +103,13 @@ public class PathFinder : MonoBehaviour
         List<Node> path = new List<Node>();
         Node currentNode = destinationNode;
 
-        path.Add(currentSearchNode);
+        path.Add(currentNode);
         currentNode.isPath = true;
 
         while (currentNode.connectedTo != null)
         {
             currentNode = currentNode.connectedTo;
-            path.Add(currentSearchNode);
+            path.Add(currentNode);
             currentNode.isPath = true;
         }
 
@@ -123,6 +123,7 @@ public class PathFinder : MonoBehaviour
         if (grid.ContainsKey(coordinates))
         {
             bool previousState = grid[coordinates].isWalkable;
+
             grid[coordinates].isWalkable = false;
             List<Node> newPath = GetNewPath();
             grid[coordinates].isWalkable = previousState;

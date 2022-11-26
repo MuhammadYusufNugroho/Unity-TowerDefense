@@ -8,7 +8,7 @@ public class GridManager : MonoBehaviour
     [SerializeField] Vector2Int gridSize;
 
     [Tooltip("World Grid Size should match with unityediotr snap setting")]
-    [SerializeField] int unityGridSize = 10;
+    int unityGridSize = 10;
     public int UnityGridSize { get { return unityGridSize; } }
 
     Dictionary<Vector2Int, Node> grid = new Dictionary<Vector2Int, Node>();
@@ -38,7 +38,7 @@ public class GridManager : MonoBehaviour
         }
     }
 
-    public void ResetNode()
+    public void ResetNodes()
     {
         foreach (KeyValuePair<Vector2Int, Node> entry in grid)
         {
