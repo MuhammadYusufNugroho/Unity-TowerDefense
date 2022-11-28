@@ -6652,7 +6652,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _timeSlider: {fileID: 136487127}
   _timerText: {fileID: 1450904831}
-  _gameTime: 180
+  _gameTime: 15
+  ObjectPools: {fileID: 1554878646}
 --- !u!1001 &1297162470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11986,11 +11987,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7451739476277512559, guid: 7eab830f4f56b4635b9af2e768483429, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7451739476277512559, guid: 7eab830f4f56b4635b9af2e768483429, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7451739476317754789, guid: 7eab830f4f56b4635b9af2e768483429, type: 3}
       propertyPath: m_Pivot.x
@@ -12082,7 +12083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7451739476317754809, guid: 7eab830f4f56b4635b9af2e768483429, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7451739476724504080, guid: 7eab830f4f56b4635b9af2e768483429, type: 3}
       propertyPath: m_IsActive
@@ -12098,15 +12099,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7451739477279560130, guid: 7eab830f4f56b4635b9af2e768483429, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7451739477279560130, guid: 7eab830f4f56b4635b9af2e768483429, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7451739477279560130, guid: 7eab830f4f56b4635b9af2e768483429, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eab830f4f56b4635b9af2e768483429, type: 3}

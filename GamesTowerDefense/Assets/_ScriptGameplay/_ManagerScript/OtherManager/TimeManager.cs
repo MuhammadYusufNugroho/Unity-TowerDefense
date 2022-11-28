@@ -15,6 +15,8 @@ public class TimeManager : MonoBehaviour
     public bool _isStopTimer { get; set; }
     #endregion
 
+    [SerializeField] GameObject ObjectPools;
+
     private void Awake()
     {
         Instance = this;
@@ -43,9 +45,15 @@ public class TimeManager : MonoBehaviour
         string textTime = string.Format("{0:0}:{1:00}", minutes, seconds);
 
         if (time <= 0)
+        {
             _isStopTimer = true;
+            ObjectPools.SetActive(false);
+        }
         else if (_isStopTimer == false)
-            _timerText.text = textTime; _timeSlider.value = time;
+        {
+            _timerText.text = textTime;
+            _timeSlider.value = time;
+        }
 
     }
 }
