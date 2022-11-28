@@ -11986,11 +11986,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7451739476277512559, guid: 7eab830f4f56b4635b9af2e768483429, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7451739476277512559, guid: 7eab830f4f56b4635b9af2e768483429, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7451739476317754789, guid: 7eab830f4f56b4635b9af2e768483429, type: 3}
       propertyPath: m_Pivot.x
@@ -12082,7 +12082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7451739476317754809, guid: 7eab830f4f56b4635b9af2e768483429, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7451739476724504080, guid: 7eab830f4f56b4635b9af2e768483429, type: 3}
       propertyPath: m_IsActive
@@ -12098,15 +12098,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7451739477279560130, guid: 7eab830f4f56b4635b9af2e768483429, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7451739477279560130, guid: 7eab830f4f56b4635b9af2e768483429, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7451739477279560130, guid: 7eab830f4f56b4635b9af2e768483429, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eab830f4f56b4635b9af2e768483429, type: 3}
@@ -12394,6 +12394,22 @@ PrefabInstance:
       propertyPath: spawnTimer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8079497497638727916, guid: 717a2e72dd71846d8bd2b37f2a8fce50, type: 3}
+      propertyPath: enemyPrefab.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8079497497638727916, guid: 717a2e72dd71846d8bd2b37f2a8fce50, type: 3}
+      propertyPath: enemyPrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 5040643765344069697, guid: 79647442fd0cf45b4b71b7ddfafa7ea2, type: 3}
+    - target: {fileID: 8079497497638727916, guid: 717a2e72dd71846d8bd2b37f2a8fce50, type: 3}
+      propertyPath: enemyPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 5040643765344069697, guid: 4439e0632a04f4202b3b15a8976f7e38, type: 3}
+    - target: {fileID: 8079497497638727916, guid: 717a2e72dd71846d8bd2b37f2a8fce50, type: 3}
+      propertyPath: enemyPrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 538575660685082404, guid: 2a84c7f4aaa3146da92c6832f5ea6e48, type: 3}
     - target: {fileID: 8079497497638727917, guid: 717a2e72dd71846d8bd2b37f2a8fce50, type: 3}
       propertyPath: m_Name
       value: ObjectPool

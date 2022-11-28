@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
-    [SerializeField] GameObject enemyPrefab;
+    [SerializeField] List<GameObject> enemyPrefab = new List<GameObject>();
     [SerializeField][Range(0, 50)] int poolSize = 5;
     [SerializeField][Range(0.1f, 30f)] float spawnTimer = 1f;
 
@@ -20,11 +20,19 @@ public class ObjectPool : MonoBehaviour
     {
         pool = new GameObject[poolSize];
 
-        for (int i = 0; i < pool.Length; i++)
+
+        for (int x = 0; x < enemyPrefab.Count; x++)
         {
-            pool[i] = Instantiate(enemyPrefab, transform);
-            pool[i].SetActive(false);
+            var y = Instantiate(enemyPrefab[x], transform);
+
+            for (int i = 0; i < pool.Length; i++)
+            {
+                pool[i] = Instantiate(y, transform);
+                pool[i].SetActive(false);
+            }
         }
+
+
     }
 
     // Start is called before the first frame update
