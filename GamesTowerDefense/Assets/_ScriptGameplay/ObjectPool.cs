@@ -20,19 +20,14 @@ public class ObjectPool : MonoBehaviour
     {
         pool = new GameObject[poolSize];
 
-
         for (int x = 0; x < enemyPrefab.Count; x++)
         {
-            var y = Instantiate(enemyPrefab[x], transform);
-
             for (int i = 0; i < pool.Length; i++)
             {
-                pool[i] = Instantiate(y, transform);
+                pool[i] = Instantiate(enemyPrefab[i], transform);
                 pool[i].SetActive(false);
             }
         }
-
-
     }
 
     // Start is called before the first frame update
