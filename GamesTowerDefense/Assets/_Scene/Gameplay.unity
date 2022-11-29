@@ -6652,8 +6652,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _timeSlider: {fileID: 136487127}
   _timerText: {fileID: 1450904831}
-  _gameTime: 60
+  _gameTime: 35
   ObjectPools: {fileID: 1554878646}
+  timeState: 0
 --- !u!1001 &1297162470
 PrefabInstance:
   m_ObjectHideFlags: 0

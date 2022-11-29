@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnemyMover : MonoBehaviour
 {
     [SerializeField][Range(0f, 5f)] float speed = 1f;
+    public float Speed { get { return speed; } set { speed = value; } }
 
     List<Node> path = new List<Node>();
 
