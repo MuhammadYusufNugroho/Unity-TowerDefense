@@ -61,14 +61,15 @@ public class TimeManager : MonoBehaviour
 
         switch (timeState)
         {
+            //Todo Checkout the return value
             case TimeState.easyLevel:
-                Debug.Log("This is Easy");
+                EasyLevel();
                 break;
             case TimeState.mediumLevel:
-                Debug.Log("This is Medium");
+                EasyLevel();
                 break;
             case TimeState.hardLevel:
-                Debug.Log("This is Hard");
+                EasyLevel();
                 break;
             default:
                 break;
@@ -79,11 +80,11 @@ public class TimeManager : MonoBehaviour
             _isStopTimer = true;
             ObjectPools.SetActive(false);
         }
-        else if (time <= 30)
+        else if (time <= 120)
         {
             timeState = TimeState.mediumLevel;
         }
-        else if (time <= 20)
+        else if (time <= 60)
         {
             timeState = TimeState.hardLevel;
         }
